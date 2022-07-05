@@ -71,9 +71,12 @@ A ConvNet is a type of artificial neural network that is also known as a convolu
 
 <img width="650" alt="mf_example" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/vgg16_layers.png">
 
-The traditional way to solve the recommender system problem is to decompose this user and item matrix aka unitarity matrix into two sub matrices: the user matrix and the item matrix. 
-And for prediction we simply multiply these two sub matrices to reconstruct the utility matrix and the larger the value on these unobserved entries the more likely that the corresponding user is going to interact with the corresponding item.
-This utility matrix is factorized in such a way that the loss or the difference between the reconstructed matrix and the true utility matrix is minimized.
+* The input tensor size for VGG16 is 224, 244 with 3 RGB channels.
+
+* The most striking feature of VGG16 is that, rather than having a huge number of hyper-parameters, they focused on having convolution layers of 3x3 filter with stride 1 and always used the same padding and maxpool layer of 2x2 filter with stride 2.
+* Conv-1 Layer has 64 filters, Conv-2 Layer has 128 filters, Conv-3 Layer has 256 filters, Conv 4 and Conv 5 Layers have 512 filters.
+* Three Fully-Connected (FC) layers follow a stack of convolutional layers: the first two have 4096 channels each, the third performs 1000-way ILSVRC classification and thus contains 1000 channels (one for each class). The final layer is the soft-max layer.
+* After a stack of convolutional layers, three Fully-Connected (FC) layers are added: the first two have 4096 channels each, while the third performs 1000-way  classification and so has 1000 channels (one for each class). The soft-max layer is the final layer.
 
 ## Problem in traditional MF
 
