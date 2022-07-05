@@ -63,13 +63,13 @@ A ConvNet is a type of artificial neural network that is also known as a convolu
 
 ## VGG16 Architecture
 
-<img width="650" alt="mf_example" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/vgg16.png">
+<img width="650" alt="vgg16" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/vgg16.png">
 <br/>
 
 * The 16 in VGG16 refers to 16 weighted layers. VGG16 comprises thirteen convolutional layers, five Max Pooling layers, and three Dense layers in total, for a total of 21 layers, but only sixteen weight layers, i.e., learnable parameters layers.
 
 
-<img width="650" alt="mf_example" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/vgg16_layers.png">
+<img width="650" alt="vgg16_layers" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/vgg16_layers.png">
 
 * The input tensor size for VGG16 is 224, 244 with 3 RGB channels.
 
@@ -78,27 +78,25 @@ A ConvNet is a type of artificial neural network that is also known as a convolu
 * Three Fully-Connected (FC) layers follow a stack of convolutional layers: the first two have 4096 channels each, the third performs 1000-way ILSVRC classification and thus contains 1000 channels (one for each class). The final layer is the soft-max layer.
 * After a stack of convolutional layers, three Fully-Connected (FC) layers are added: the first two have 4096 channels each, while the third performs 1000-way  classification and so has 1000 channels (one for each class). The soft-max layer is the final layer.
 
-## Problem in traditional MF
+## Dataset collection & Preperation
+* Using the openCV library, we collected 90 images from our computer's camera, both with and without faces.
+* The images were then annotated and labelled with the labelMe tool.
+* Because Neural Networks require large amounts of data to be trained properly, and thus 90 images are insufficient, we employed image augmentation to create new samples from our existing samples by making the following changes to our existing samples:
+    * RandomCrop
+    * HorizontalFlip
+    * RandomBrightnessContrast change
+    * RandomGamma
+    * RGBShift
+    * VerticalFlip
 
-Essentially what matrix factorization does is that it projects each of the user and item onto a Latin space of size K so if user items are represented by K dimension Latent vectors we can measure the similarity between each Latent vector by computing a dot product.
+## Model Building 
+
+<img width="650" alt="build_model" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/build_model.png">
+
+<br/>
+* Because our goal is to categorise the image as a face-image and also draw a boundary box around the face so we removed the top-layers of vgg-16 since they for classification purpose.
 
 
-In fact for prediction we're computing the dot product of each of the user Latin vectors and the item Latin vectors.
- However the paper argued that inner products limit the expressiveness of latent vectors.
-
-To understand the problem, let us consider following image:
-<img width="650" alt="mf_example" src="https://github.com/stuck-in-a-local-optimum/Nueral-Collaborative-Filtering/blob/main/images/mf_example.png">
-
-
-Let us first focus on the top three rows of this utility matrix, by computing the cosine similarity between these vectors, we know that user-2 and user-3 are most similar  and user 1 and 3 are least similar. We now project these users onto the latent-space of dimension-2, since user-2 and user-3 are the most similar they are close to each other while user-1 and user-3 are least similar so they are far from each other.
-
- Now we consider user 4 while computing the similarity between user-4  and the others. We know that user 1 is the most similar with user-4 while user-2 is least similar.
- 
- 
- However here's where the problem comes in, no matter how we place user-4 around user-1 user 3 ends up being the farthest from user-4 while in reality user-2 is the most different from user-4 not user-3.W
- 
-
-The example shows the incompetence of inner product in bottling a complex interaction between user latent vectors and item latent vectors, so the paper proposed a new neural architecture calling it neural collaborative filtering.
 
 
 
@@ -115,20 +113,7 @@ Following the GMF architecture proposed by authors.
 We can see that  both the user and item are one hot encoded and then they are projected onto the latent space with an embedded layer.
  The neural CF layers basically can be any kind of neural connections, multiple layer perceptron for instance can be placed here.
  The paper claim that with the complicated connection in these layers and the non-linearity,  this model is capable of learning the user and item interactions in latent space properly.
- 
-
-<img width="650" alt="gmf2" src="https://github.com/stuck-in-a-local-optimum/Nueral-Collaborative-Filtering/blob/main/images/gmf2.png">
-The authors also showed how matrix factorization is a special case of GMF,
-if we replace the new CF layers here with a multiplication layer which performs element-wise product on its two inputs and if we also set the weights from the multiplication layer to the output layer to be a unity matrix and if we set the activation function of the output layer to be a linear function. Then this GMF becomes traditional MF.
-
-
-__Neural Collaborative Filtering__
-
-<img width="650" alt="ncf" src="https://github.com/stuck-in-a-local-optimum/Nueral-Collaborative-Filtering/blob/main/images/ncf.png">
-
-So above is the final model proposed, it contains two sub modules, in order to introduce more non-linearity they includes a multi-layer perceptron model here in addition to original generalized material factorization layer and they fused these models with a concatenation layer followed by a sigmoid activation function.
-
-We have implemented it in pytorch and have used Movie-lense dataset and book-crossing dataset for training and testing.
+d have used Movie-lense dataset and book-crossing dataset for training and testing.
 
 
 ## Results
