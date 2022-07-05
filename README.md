@@ -81,8 +81,8 @@ A ConvNet is a type of artificial neural network that is also known as a convolu
 ## Dataset collection, Annotation & Augmentation
 
 * Using the openCV library, we collected 90 images from our computer's camera, both with and without faces.
-* The images were then annotated and labelled with the [labelMe](https://github.com/wkentaro/labelme)  tool.
-* Because Neural Networks require large amounts of data to be trained properly, and thus 90 images are insufficient, we employed image augmentation to create new samples from our existing samples by making the following changes to our existing samples:
+* The images were then annotated and labelled with the [labelMe](https://github.com/wkentaro/labelme) annotation tool.
+* Because Neural Networks require large amounts of data to be trained properly, and thus 90 images are insufficient, we employed image augmentation to create new samples from our existing samples by making the following changes to our existing samples using [Albumentations](https://albumentations.ai/docs/) tool:
     * RandomCrop
     * HorizontalFlip
     * RandomBrightnessContrast change
