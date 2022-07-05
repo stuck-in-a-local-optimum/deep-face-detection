@@ -65,7 +65,9 @@ A ConvNet is a type of artificial neural network that is also known as a convolu
 
 <img width="650" alt="mf_example" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/vgg16.png">
 
+
 The 16 in VGG16 refers to 16 weighted layers. VGG16 comprises thirteen convolutional layers, five Max Pooling layers, and three Dense layers in total, for a total of 21 layers, but only sixteen weight layers, i.e., learnable parameters layers.
+
 
 <img width="650" alt="mf_example" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/vgg16_layers.png">
 
