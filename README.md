@@ -46,7 +46,7 @@
       <a href="#What is VGG16"?What is VGG16?</a>
     </li>
     <li><a href="#VGG16 Architecture">VGG16 Architecture</a></li>
-    <li><a href="#Dataset collection & Preperation">Dataset collection & Preperation</a></li>
+    <li><a href="#Dataset collection, Annotation & Augmentation">Dataset collection, Annotation & Augmentation</a></li>
     <li><a href="#Model Building">Model Building</a></li>
     <li><a href="#Localization loss & classification loss">Localization loss & classification loss</a></li>
     <li><a href="#Performance Plot">Performance Plot</a></li>
@@ -78,9 +78,10 @@ A ConvNet is a type of artificial neural network that is also known as a convolu
 * Three Fully-Connected (FC) layers follow a stack of convolutional layers: the first two have 4096 channels each, the third performs 1000-way ILSVRC classification and thus contains 1000 channels (one for each class). The final layer is the soft-max layer.
 * After a stack of convolutional layers, three Fully-Connected (FC) layers are added: the first two have 4096 channels each, while the third performs 1000-way  classification and so has 1000 channels (one for each class). The soft-max layer is the final layer.
 
-## Dataset collection & Preperation
+## Dataset collection, Annotation & Augmentation
+
 * Using the openCV library, we collected 90 images from our computer's camera, both with and without faces.
-* The images were then annotated and labelled with the labelMe tool.
+* The images were then annotated and labelled with the [labelMe](https://github.com/wkentaro/labelme)  tool.
 * Because Neural Networks require large amounts of data to be trained properly, and thus 90 images are insufficient, we employed image augmentation to create new samples from our existing samples by making the following changes to our existing samples:
     * RandomCrop
     * HorizontalFlip
