@@ -43,13 +43,13 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#Traditional MF">Traditional MF</a>
+      <a href="#What is VGG16"?What is VGG16?</a>
     </li>
-    <li><a href="#Problem in traditional MF">Problem in traditional MF</a></li>
-    <li><a href="#Implementation">Implementation</a></li>
-    <li><a href="#Results">Results</a></li>
-    <li><a href="#contact">Contacts</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#VGG16 Architecture">VGG16 Architecture</a></li>
+    <li><a href="#Dataset collection & Preperation">Dataset collection & Preperation</a></li>
+    <li><a href="#Model Building">Model Building</a></li>
+    <li><a href="#Localization loss & classification loss">Localization loss & classification loss</a></li>
+    <li><a href="#Performance Plot">Performance Plot</a></li>
   </ol>
 </details>
 
@@ -104,21 +104,9 @@ A ConvNet is a type of artificial neural network that is also known as a convolu
 <img width="650" alt="loss" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/loss.png">
 
 
-##Performance Plot
+## Performance Plot
 
 <img width="650" alt="performance_plot" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/preformance_plot.png">
-
-
-
-We can see that  both the user and item are one hot encoded and then they are projected onto the latent space with an embedded layer.
- The neural CF layers basically can be any kind of neural connections, multiple layer perceptron for instance can be placed here.
- The paper claim that with the complicated connection in these layers and the non-linearity,  this model is capable of learning the user and item interactions in latent space properly.
-d have used Movie-lense dataset and book-crossing dataset for training and testing.
-
-
-## Results
-Following table shows results of our model on different datasets.
-<img width="650" alt="ncf" src="https://github.com/stuck-in-a-local-optimum/Nueral-Collaborative-Filtering/blob/main/images/results.png">
 
 
 
@@ -131,10 +119,7 @@ Following table shows results of our model on different datasets.
 <br/>
 [Twitter](https://twitter.com/weightsNbiases)
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
 
-* [Neural Collaborative Filtering](https://dl.acm.org/doi/10.1145/3038912.3052569)
 
 <p align="right">(<a href="#top">back to top</a>)</p> 
 
