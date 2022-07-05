@@ -99,14 +99,14 @@ A ConvNet is a type of artificial neural network that is also known as a convolu
 
 
 
+## Localization loss & classification loss
+
+<img width="650" alt="loss" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/loss.png">
 
 
-## Implementation
-__GENERALIZED MATRIX FACTORIZATION__
+##Performance Plot
 
-Following the GMF architecture proposed by authors. 
-
-<img width="650" alt="gmf" src="https://github.com/stuck-in-a-local-optimum/Nueral-Collaborative-Filtering/blob/main/images/gmf.png">
+<img width="650" alt="performance_plot" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/performance_plot.png">
 
 
 
