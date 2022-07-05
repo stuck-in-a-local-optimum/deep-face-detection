@@ -63,11 +63,11 @@ A ConvNet is a type of artificial neural network that is also known as a convolu
 
 ## VGG16 Architecture
 
-<img width="650" alt="mf_example" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/vgg.png">
+<img width="650" alt="mf_example" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/vgg16.png">
 
 The 16 in VGG16 refers to 16 weighted layers. VGG16 comprises thirteen convolutional layers, five Max Pooling layers, and three Dense layers in total, for a total of 21 layers, but only sixteen weight layers, i.e., learnable parameters layers.
 
-<img width="650" alt="mf_example" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/vgg_layers.png">
+<img width="650" alt="mf_example" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/vgg16_layers.png">
 
 The traditional way to solve the recommender system problem is to decompose this user and item matrix aka unitarity matrix into two sub matrices: the user matrix and the item matrix. 
 And for prediction we simply multiply these two sub matrices to reconstruct the utility matrix and the larger the value on these unobserved entries the more likely that the corresponding user is going to interact with the corresponding item.
