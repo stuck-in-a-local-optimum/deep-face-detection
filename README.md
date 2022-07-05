@@ -24,7 +24,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">Deep Face Detection</h3>
+  <h3 align="center">DEEP FACE DETECTION</h3>
 
   <p align="center">
     A computer Vision project to detect human faces in real-time.
