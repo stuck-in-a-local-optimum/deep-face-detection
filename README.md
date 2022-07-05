@@ -24,10 +24,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">Neural Collaborative Filtering</h3>
+  <h3 align="center">Deep Face Detection</h3>
 
   <p align="center">
-    Implementation of a WWW'17 conference's research paper "Neural Collaborative Filtering", which proposed use of deep-learning to fix the incompetence of traditional Matrix Factorization for a recommender-system!
+    A computer vision project to detect human faces in real-time by pre-training the ‘VGG16’ architecture on our dataset that has been collected using ‘openCV’ and later augmented using the ‘Albumentations’ tool.
     
 
     
