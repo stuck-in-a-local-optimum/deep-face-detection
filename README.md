@@ -93,7 +93,6 @@ A ConvNet is a type of artificial neural network that is also known as a convolu
 
 <img width="650" alt="build_model" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/build_model.png">
 
-<br/>
 * Because our goal is to categorise the image as a face-image and also draw a boundary box around the face so we removed the top-layers of vgg-16 since they for classification purpose.
 * Then we added our classication layer of 1 neuron with sigmoid activation function for face detection and a regressor layer of 4 neurons for boundary point value.
 
