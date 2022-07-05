@@ -59,12 +59,12 @@
 ## What is VGG16?
 
 A ConvNet is a type of artificial neural network that is also known as a convolutional neural network. An input layer, an output layer, and multiple hidden layers comprise a convolutional neural network. VGG16 is a CNN (Convolutional Neural Network) that is widely regarded as one of the best computer vision models available today. The authors of this model evaluated the networks and increased the depth with a very small (3 *3) convolution filter, which demonstrated a considerable improvement over prior AlexNet. They increased the depth to 16-19 weight layers, resulting in around 138 trainable parameters.
-
+<br/>
 
 ## VGG16 Architecture
 
 <img width="650" alt="mf_example" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/vgg16.png">
-
+<br/>
 
 The 16 in VGG16 refers to 16 weighted layers. VGG16 comprises thirteen convolutional layers, five Max Pooling layers, and three Dense layers in total, for a total of 21 layers, but only sixteen weight layers, i.e., learnable parameters layers.
 
