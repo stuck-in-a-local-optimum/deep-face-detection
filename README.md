@@ -43,7 +43,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#What is VGG16"?What is VGG16?</a>
+      <a href="#What is VGG16?">What is VGG16?</a>
     </li>
     <li><a href="#VGG16 Architecture">VGG16 Architecture</a></li>
     <li><a href="#Dataset collection, Annotation & Augmentation">Dataset collection, Annotation & Augmentation</a></li>
