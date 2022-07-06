@@ -110,6 +110,7 @@ A ConvNet is a type of artificial neural network that is also known as a convolu
 <img width="650" alt="performance_plot" src="https://github.com/stuck-in-a-local-optimum/deep-face-detection/blob/main/images/preformance_plot.png">
 
 
+## [A quick demo](https://youtu.be/2n4013iex-o)
 
 
 
